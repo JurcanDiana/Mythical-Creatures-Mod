@@ -1,6 +1,7 @@
 package net.diana.licentamod;
 
 import com.mojang.logging.LogUtils;
+import net.diana.licentamod.item.ModItems;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -16,9 +17,12 @@ public class TutorialMod
 {
     public static final String MOD_ID = "licentamod";
     private static final Logger LOGGER = LogUtils.getLogger();
+
     public TutorialMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModItems.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
