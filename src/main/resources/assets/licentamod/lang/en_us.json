@@ -1,10 +1,13 @@
 {
   "item.licentamod.zircon": "Zircon",
   "item.licentamod.raw_zircon": "Raw Zircon",
+  "item.licentamod.mermaid_crown": "Mermaid Crown",
+  "item.licentamod.eight_ball": "Eight Ball",
 
   "block.licentamod.zircon_block": "Block of Zircon",
   "block.licentamod.zircon_ore": "Zircon Ore",
   "block.licentamod.deepslate_zircon_ore": "Deepslate Zircon Ore",
+  "block.licentamod.jumpy_block": "Jumpy Block",
 
   "itemGroup.tutorialtab": "Zircon tab"
 }
