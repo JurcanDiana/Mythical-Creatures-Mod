@@ -3,6 +3,7 @@ package net.diana.licentamod;
 import com.mojang.logging.LogUtils;
 import net.diana.licentamod.block.ModBlocks;
 import net.diana.licentamod.item.ModItems;
+import net.diana.licentamod.villager.ModVillagers;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
@@ -27,6 +28,7 @@ public class TutorialMod
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModVillagers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -35,7 +37,9 @@ public class TutorialMod
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-
+        event.enqueueWork(() -> {
+            ModVillagers.registerPOIs();
+        });
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent

@@ -13,5 +13,7 @@
   "block.licentamod.zircon_lamp": "Zircon Lamp",
   "block.licentamod.blueberry_crop": "Blueberry Crop",
 
-  "itemGroup.tutorialtab": "Zircon tab"
+  "itemGroup.tutorialtab": "Zircon tab",
+
+  "entity.minecraft.villager.licentamod.jumpy_master": "Jumpy Master"
 }
