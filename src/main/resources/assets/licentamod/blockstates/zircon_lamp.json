@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lit=true": { "model": "licentamod:block/zircon_lamp_on" },
+    "lit=false": { "model": "licentamod:block/zircon_lamp_off" }
+  }
+}
