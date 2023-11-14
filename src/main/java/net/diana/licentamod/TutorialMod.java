@@ -5,6 +5,8 @@ import net.diana.licentamod.block.ModBlocks;
 import net.diana.licentamod.item.ModItems;
 import net.diana.licentamod.painting.ModPaintings;
 import net.diana.licentamod.villager.ModVillagers;
+import net.diana.licentamod.world.feature.ModConfiguredFeatures;
+import net.diana.licentamod.world.feature.ModPlacedFeatures;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
@@ -31,6 +33,8 @@ public class TutorialMod
         ModBlocks.register(modEventBus);
         ModVillagers.register(modEventBus);
         ModPaintings.register(modEventBus);
+        ModConfiguredFeatures.register(modEventBus);
+        ModPlacedFeatures.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
