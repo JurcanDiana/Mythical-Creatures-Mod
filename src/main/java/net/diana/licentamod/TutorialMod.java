@@ -3,6 +3,7 @@ package net.diana.licentamod;
 import com.mojang.logging.LogUtils;
 import net.diana.licentamod.block.ModBlocks;
 import net.diana.licentamod.item.ModItems;
+import net.diana.licentamod.painting.ModPaintings;
 import net.diana.licentamod.villager.ModVillagers;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -29,6 +30,7 @@ public class TutorialMod
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModVillagers.register(modEventBus);
+        ModPaintings.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
