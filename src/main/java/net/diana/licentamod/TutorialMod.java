@@ -2,6 +2,8 @@ package net.diana.licentamod;
 
 import com.mojang.logging.LogUtils;
 import net.diana.licentamod.block.ModBlocks;
+import net.diana.licentamod.entity.ModEntityTypes;
+import net.diana.licentamod.entity.client.ChomperRenderer;
 import net.diana.licentamod.item.ModItems;
 import net.diana.licentamod.painting.ModPaintings;
 import net.diana.licentamod.villager.ModVillagers;
@@ -9,6 +11,8 @@ import net.diana.licentamod.world.feature.ModConfiguredFeatures;
 import net.diana.licentamod.world.feature.ModPlacedFeatures;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -17,6 +21,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
+import software.bernie.geckolib3.GeckoLib;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(TutorialMod.MOD_ID)
@@ -35,6 +40,10 @@ public class TutorialMod
         ModPaintings.register(modEventBus);
         ModConfiguredFeatures.register(modEventBus);
         ModPlacedFeatures.register(modEventBus);
+
+        ModEntityTypes.ENTITY_TYPES.register(modEventBus);
+
+        GeckoLib.initialize();
 
         modEventBus.addListener(this::commonSetup);
 
@@ -55,8 +64,7 @@ public class TutorialMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            //see through parts will be white without it
-            ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLUEBERRY_CROP.get(), RenderType.cutout());
+            EntityRenderers.register(ModEntityTypes.CHOMPER.get(), ChomperRenderer::new);
         }
     }
 }
