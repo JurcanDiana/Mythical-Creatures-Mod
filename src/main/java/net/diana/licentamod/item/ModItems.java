@@ -41,6 +41,10 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntityTypes.CHOMPER, 0x22b341, 0x19732e,
                     new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
+    public static final RegistryObject<Item> UNICORN_SPAWN_EGG = ITEMS.register("unicorn_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntityTypes.UNICORN, 0xffc0cb, 0xff69b4,
+                    new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

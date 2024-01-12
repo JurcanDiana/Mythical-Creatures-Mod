@@ -4,6 +4,8 @@ import com.mojang.logging.LogUtils;
 import net.diana.licentamod.block.ModBlocks;
 import net.diana.licentamod.entity.ModEntityTypes;
 import net.diana.licentamod.entity.client.ChomperRenderer;
+import net.diana.licentamod.entity.client.UnicornModel;
+import net.diana.licentamod.entity.client.UnicornRenderer;
 import net.diana.licentamod.item.ModItems;
 import net.diana.licentamod.painting.ModPaintings;
 import net.diana.licentamod.villager.ModVillagers;
@@ -65,6 +67,7 @@ public class TutorialMod
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             EntityRenderers.register(ModEntityTypes.CHOMPER.get(), ChomperRenderer::new);
+            EntityRenderers.register(ModEntityTypes.UNICORN.get(), UnicornRenderer::new);
         }
     }
 }

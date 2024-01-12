@@ -4,6 +4,7 @@ import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.diana.licentamod.TutorialMod;
 import net.diana.licentamod.entity.ModEntityTypes;
 import net.diana.licentamod.entity.custom.ChomperEntity;
+import net.diana.licentamod.entity.custom.UnicornEntity;
 import net.diana.licentamod.item.ModItems;
 import net.diana.licentamod.villager.ModVillagers;
 import net.minecraft.world.entity.npc.VillagerProfession;
@@ -51,6 +52,7 @@ public class ModEvents {
         @SubscribeEvent
         public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
             event.put(ModEntityTypes.CHOMPER.get(), ChomperEntity.setAttributes());
+            event.put(ModEntityTypes.UNICORN.get(), UnicornEntity.setAttributes());
         }
     }
 }
