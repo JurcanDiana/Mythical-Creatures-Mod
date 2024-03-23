@@ -1,9 +1,7 @@
 package net.diana.licentamod.block;
 
-import net.diana.licentamod.TutorialMod;
-import net.diana.licentamod.block.custom.BlueberryCropBlock;
+import net.diana.licentamod.MythicalCreaturesMod;
 import net.diana.licentamod.block.custom.JumpyBlock;
-import net.diana.licentamod.block.custom.ZirconLampBlock;
 import net.diana.licentamod.item.ModCreativeModeTab;
 import net.diana.licentamod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -24,43 +22,11 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS, TutorialMod.MOD_ID);
-
-    public static final RegistryObject<Block> ZIRCON_BLOCK = registerBlock("zircon_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_TAB);
+            DeferredRegister.create(ForgeRegistries.BLOCKS, MythicalCreaturesMod.MOD_ID);
 
     public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
             () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_TAB);
-
-    public static final RegistryObject<Block> BLUEBERRY_CROP = BLOCKS.register("blueberry_crop",
-            () -> new BlueberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
-
-    public static final RegistryObject<Block> ZIRCON_LAMP = registerBlock("zircon_lamp",
-            () -> new ZirconLampBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(6f).requiresCorrectToolForDrops()
-                    .lightLevel(state -> state.getValue(ZirconLampBlock.LIT) ? 15 : 0 )), ModCreativeModeTab.TUTORIAL_TAB);
-
-    public static final RegistryObject<Block> ZIRCON_ORE = registerBlock("zircon_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(6f).requiresCorrectToolForDrops(),
-                    UniformInt.of(3, 7)), ModCreativeModeTab.TUTORIAL_TAB);
-
-    public static final RegistryObject<Block> DEEPSLATE_ZIRCON_ORE = registerBlock("deepslate_zircon_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(6f).requiresCorrectToolForDrops(),
-                    UniformInt.of(3, 7)), ModCreativeModeTab.TUTORIAL_TAB);
-
-    public static final RegistryObject<Block> ENDSTONE_ZIRCON_ORE = registerBlock("endstone_zircon_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(6f).requiresCorrectToolForDrops(),
-                    UniformInt.of(3, 7)), ModCreativeModeTab.TUTORIAL_TAB);
-
-    public static final RegistryObject<Block> NETHERRACK_ZIRCON_ORE = registerBlock("netherrack_zircon_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(6f).requiresCorrectToolForDrops(),
-                    UniformInt.of(3, 7)), ModCreativeModeTab.TUTORIAL_TAB);
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block,
                                                                     CreativeModeTab tab) {

@@ -1,23 +1,11 @@
 {
-  "item.licentamod.zircon": "Zircon",
-  "item.licentamod.raw_zircon": "Raw Zircon",
   "item.licentamod.mermaid_crown": "Mermaid Crown",
-  "item.licentamod.eight_ball": "Eight Ball",
-  "item.licentamod.blueberry": "Blueberry",
-  "item.licentamod.blueberry_seeds": "Blueberry Seeds",
   "item.licentamod.chomper_spawn_egg": "Chomper Spawn Egg",
   "item.licentamod.unicorn_spawn_egg": "Unicorn Spawn Egg",
+  "item.licentamod.mermaid_spawn_egg": "Mermaid Spawn Egg",
+  "item.licentamod.centaur_spawn_egg": "Centaur Spawn Egg",
 
-  "block.licentamod.zircon_block": "Block of Zircon",
-  "block.licentamod.zircon_ore": "Zircon Ore",
-  "block.licentamod.deepslate_zircon_ore": "Deepslate Zircon Ore",
   "block.licentamod.jumpy_block": "Jumpy Block",
-  "block.licentamod.zircon_lamp": "Zircon Lamp",
-  "block.licentamod.blueberry_crop": "Blueberry Crop",
-  "block.licentamod.endstone_zircon_ore": "Endstone Zircon Ore",
-  "block.licentamod.netherrack_zircon_ore": "Netherrack Zircon Ore",
 
-  "itemGroup.tutorialtab": "Zircon tab",
-
-  "entity.minecraft.villager.licentamod.jumpy_master": "Jumpy Master"
+  "itemGroup.tutorialtab": "Zircon tab"
 }
