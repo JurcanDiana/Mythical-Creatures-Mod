@@ -3,7 +3,6 @@ package net.diana.licentamod.entity.custom.goals;
 import net.diana.licentamod.entity.custom.MermaidEntity;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.ai.goal.JumpGoal;

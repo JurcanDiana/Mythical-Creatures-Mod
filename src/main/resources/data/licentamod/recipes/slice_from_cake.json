@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "licentamod:mermaid_cake"
+    }
+  ],
+  "result": {
+    "item": "licentamod:slice_cake",
+    "count": 9
+  }
+}

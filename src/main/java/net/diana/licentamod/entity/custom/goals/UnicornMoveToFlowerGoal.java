@@ -6,7 +6,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.entity.ai.goal.Goal;
 import org.slf4j.Logger;
-
 import java.util.EnumSet;
 
 public class UnicornMoveToFlowerGoal extends Goal {

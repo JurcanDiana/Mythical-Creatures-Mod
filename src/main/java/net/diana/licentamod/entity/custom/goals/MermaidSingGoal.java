@@ -5,9 +5,10 @@ import net.diana.licentamod.sound.ModSounds;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.item.Items;
+
 import java.util.List;
 
 public class MermaidSingGoal extends Goal {
@@ -28,23 +29,28 @@ public class MermaidSingGoal extends Goal {
     @Override
     public boolean canUse() {
         if (this.singCooldown <= 0) {
-            List<Player> list =
+            List<Player> players =
                     this.mermaid.level.getEntitiesOfClass(Player.class,
                             this.mermaid.getBoundingBox().inflate(EFFECT_RADIUS),
-                            player -> !player.isSpectator());
-            return !list.isEmpty();
+                            player -> !player.isSpectator() && !isHoldingItem(player));
+            return !players.isEmpty();
         }
         return false;
     }
 
+    private boolean isHoldingItem(Player player) {
+        return player.getMainHandItem().is(Items.NETHER_STAR) ||
+                player.getOffhandItem().is(Items.NETHER_STAR);
+    }
+
     @Override
     public void start() {
-        List<Player> list =
+        List<Player> players =
                 this.mermaid.level.getEntitiesOfClass(Player.class,
                         this.mermaid.getBoundingBox().inflate(EFFECT_RADIUS),
-                        player -> !player.isSpectator());
+                        player -> !player.isSpectator() && !isHoldingItem(player));
 
-        for (Player player : list) {
+        for (Player player : players) {
             player.addEffect(new MobEffectInstance(MobEffects.CONFUSION, CONFUSION_DURATION, CONFUSION_AMPLIFIER));
         }
 

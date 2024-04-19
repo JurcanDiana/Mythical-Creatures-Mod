@@ -1,12 +1,8 @@
 package net.diana.licentamod.item;
 
 import net.diana.licentamod.MythicalCreaturesMod;
-import net.diana.licentamod.block.ModBlocks;
 import net.diana.licentamod.entity.ModEntityTypes;
-import net.diana.licentamod.item.custom.EightBallItem;
-import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -18,6 +14,17 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, MythicalCreaturesMod.MOD_ID);
 
     public static final RegistryObject<Item> MERMAID_CROWN = ITEMS.register("mermaid_crown",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Item> MERMAID_CAKE = ITEMS.register("mermaid_cake",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+    public static final RegistryObject<Item> SLICE_CAKE = ITEMS.register("slice_cake",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).stacksTo(64)));
+
+    public static final RegistryObject<Item> UNICORN_FLY_POTION = ITEMS.register("unicorn_fly_potion",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+
+    public static final RegistryObject<Item> CENTAUR_CHARM = ITEMS.register("centaur_charm",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
     public static final RegistryObject<Item> UNICORN_SPAWN_EGG = ITEMS.register("unicorn_spawn_egg",

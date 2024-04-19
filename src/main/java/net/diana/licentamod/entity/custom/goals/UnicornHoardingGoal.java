@@ -4,7 +4,6 @@ import com.mojang.logging.LogUtils;
 import net.diana.licentamod.entity.custom.UnicornEntity;
 import net.minecraft.world.entity.ai.goal.Goal;
 import org.slf4j.Logger;
-
 import java.util.EnumSet;
 import java.util.List;
 

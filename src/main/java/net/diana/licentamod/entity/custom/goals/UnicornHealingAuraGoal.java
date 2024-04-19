@@ -11,7 +11,6 @@ import net.minecraft.world.entity.npc.AbstractVillager;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import org.slf4j.Logger;
-
 import java.util.EnumSet;
 import java.util.List;
 

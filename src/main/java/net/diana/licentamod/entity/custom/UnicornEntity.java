@@ -19,7 +19,7 @@ import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.npc.AbstractVillager;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
+import net.diana.licentamod.item.ModItems;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.AnimationState;
@@ -136,7 +136,7 @@ public class UnicornEntity extends AbstractHorse implements IAnimatable, Neutral
     @Override
     public InteractionResult mobInteract(Player player, InteractionHand hand) {
         ItemStack itemstack = player.getItemInHand(hand);
-        if (itemstack.getItem() == Items.ENCHANTED_GOLDEN_APPLE) {
+        if (itemstack.getItem() == ModItems.UNICORN_FLY_POTION.get()) {
             this.startFlying();
             System.out.println("Interacted with unicorn. Starting to fly.");
             return InteractionResult.sidedSuccess(this.level.isClientSide);

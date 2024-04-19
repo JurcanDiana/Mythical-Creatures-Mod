@@ -1,11 +1,13 @@
 {
-  "item.licentamod.mermaid_crown": "Mermaid Crown",
-  "item.licentamod.chomper_spawn_egg": "Chomper Spawn Egg",
   "item.licentamod.unicorn_spawn_egg": "Unicorn Spawn Egg",
   "item.licentamod.mermaid_spawn_egg": "Mermaid Spawn Egg",
   "item.licentamod.centaur_spawn_egg": "Centaur Spawn Egg",
 
-  "block.licentamod.jumpy_block": "Jumpy Block",
+  "item.licentamod.unicorn_fly_potion": "Unicorn Flying Potion",
+  "item.licentamod.centaur_charm": "Centaur Charm",
+  "item.licentamod.mermaid_cake": "Mermaid Cake",
+  "item.licentamod.slice_cake": "Slice of Mermaid Cake",
+  "item.licentamod.mermaid_crown": "Mermaid Crown",
 
-  "itemGroup.tutorialtab": "Zircon tab"
+  "itemGroup.mythicalcreaturestab": "Mythical Creatures tab"
 }
