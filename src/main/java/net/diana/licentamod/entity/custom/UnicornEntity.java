@@ -134,8 +134,7 @@ public class UnicornEntity extends AbstractHorse implements IAnimatable, Neutral
     }
 
     @Override
-    public InteractionResult mobInteract(Player player, InteractionHand hand) {
-        ItemStack itemstack = player.getItemInHand(hand);
+    public InteractionResult mobInteract(Player player, InteractionHand hand) {ItemStack itemstack = player.getItemInHand(hand);
         if (itemstack.getItem() == ModItems.UNICORN_FLY_POTION.get()) {
             this.startFlying();
             System.out.println("Interacted with unicorn. Starting to fly.");

@@ -1,5 +1,6 @@
 package net.diana.licentamod.entity.custom;
 
+import net.diana.licentamod.block.ModBlocks;
 import net.diana.licentamod.entity.custom.goals.MermaidDeliverItemGoal;
 import net.diana.licentamod.entity.custom.goals.MermaidJumpGoal;
 import net.diana.licentamod.entity.custom.goals.MermaidSingGoal;
@@ -51,7 +52,7 @@ public class MermaidEntity extends AbstractFish implements IAnimatable {
     @Override
     public InteractionResult mobInteract(Player player, InteractionHand hand) {
         ItemStack itemstack = player.getItemInHand(hand);
-        if (itemstack.getItem() == ModItems.MERMAID_CAKE.get()) {
+        if (itemstack.getItem() == ModItems.SLICE_CAKE.get()) {
             if (!this.level.isClientSide) {
                 this.readyToDeliverItems = true;
                 this.lastInteractingPlayer = player;

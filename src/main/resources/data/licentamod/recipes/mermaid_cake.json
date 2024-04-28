@@ -1,16 +1,32 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "###",
-    "###",
-    "###"
+    "MPM",
+    "SES",
+    "GWG"
   ],
   "key": {
-    "#": {
-      "item": "licentamod:slice_cake"
+    "M": {
+      "item": "minecraft:milk_bucket"
+    },
+    "P": {
+      "item": "minecraft:prismarine_crystals"
+    },
+    "S": {
+      "item": "minecraft:sugar"
+    },
+    "E": {
+      "item": "minecraft:egg"
+    },
+    "G": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "W": {
+      "item": "minecraft:wheat"
     }
   },
   "result": {
-    "item": "licentamod:mermaid_cake"
+    "item": "licentamod:mermaid_cake",
+    "count": 1
   }
 }

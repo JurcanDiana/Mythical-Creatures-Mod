@@ -16,8 +16,8 @@ public class ModItems {
     public static final RegistryObject<Item> MERMAID_CROWN = ITEMS.register("mermaid_crown",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
 
-    public static final RegistryObject<Item> MERMAID_CAKE = ITEMS.register("mermaid_cake",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
+//    public static final RegistryObject<Item> MERMAID_CAKE = ITEMS.register("mermaid_cake",
+//            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
     public static final RegistryObject<Item> SLICE_CAKE = ITEMS.register("slice_cake",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).stacksTo(64)));
 

@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "bites=0": { "model": "licentamod:block/mermaid_cake" },
+    "bites=1": { "model": "licentamod:block/mermaid_cake_one_bite" },
+    "bites=2": { "model": "licentamod:block/mermaid_cake_two_bites" },
+    "bites=3": { "model": "licentamod:block/mermaid_cake_three_bites" },
+    "bites=4": { "model": "licentamod:block/mermaid_cake_four_bites" },
+    "bites=5": { "model": "licentamod:block/mermaid_cake_five_bites" },
+    "bites=6": { "model": "licentamod:block/mermaid_cake_six_bites" }
+  }
+}

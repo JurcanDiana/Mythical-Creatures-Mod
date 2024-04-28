@@ -5,9 +5,10 @@
 
   "item.licentamod.unicorn_fly_potion": "Unicorn Flying Potion",
   "item.licentamod.centaur_charm": "Centaur Charm",
-  "item.licentamod.mermaid_cake": "Mermaid Cake",
   "item.licentamod.slice_cake": "Slice of Mermaid Cake",
   "item.licentamod.mermaid_crown": "Mermaid Crown",
+
+  "block.licentamod.mermaid_cake": "Mermaid Cake",
 
   "itemGroup.mythicalcreaturestab": "Mythical Creatures tab"
 }
