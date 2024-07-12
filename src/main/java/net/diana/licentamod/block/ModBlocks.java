@@ -22,7 +22,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> MERMAID_CAKE = registerBlock("mermaid_cake",
             () -> new MermaidCakeBlock(Block.Properties.of(Material.CAKE).strength(0.5f).noOcclusion()),
-            ModCreativeModeTab.TUTORIAL_TAB);
+            ModCreativeModeTab.MYTHICAL_CREATURES_TAB);
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block,
                                                                     CreativeModeTab tab) {

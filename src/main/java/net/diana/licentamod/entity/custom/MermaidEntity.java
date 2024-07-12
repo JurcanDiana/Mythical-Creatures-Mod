@@ -41,12 +41,12 @@ public class MermaidEntity extends AbstractFish implements IAnimatable {
     @Override
     protected void registerGoals() {
         super.registerGoals();
-        this.goalSelector.addGoal(4, new BreathAirGoal(this));
-        this.goalSelector.addGoal(3, new RandomSwimmingGoal(this, 1.0, 40));
-        this.goalSelector.addGoal(2, new TryFindWaterGoal(this));
+        this.goalSelector.addGoal(5, new BreathAirGoal(this));
+        this.goalSelector.addGoal(0, new RandomSwimmingGoal(this, 1.0, 40));
+        this.goalSelector.addGoal(4, new TryFindWaterGoal(this));
         this.goalSelector.addGoal(2, new MermaidJumpGoal(this, 100));
         this.goalSelector.addGoal(1, new MermaidSingGoal(this));
-        this.goalSelector.addGoal(0, new MermaidDeliverItemGoal(this));
+        this.goalSelector.addGoal(3, new MermaidDeliverItemGoal(this));
     }
 
     @Override

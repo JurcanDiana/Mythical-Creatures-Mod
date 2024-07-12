@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "licentamod:centaur_charm"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "licentamod:unicorn_fly_potion"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ]
+}

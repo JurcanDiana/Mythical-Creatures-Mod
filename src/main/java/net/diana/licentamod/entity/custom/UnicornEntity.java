@@ -55,26 +55,12 @@ public class UnicornEntity extends AbstractHorse implements IAnimatable, Neutral
 
     @Override
     protected void registerGoals() {
-        //this.goalSelector.addGoal(0, new FloatGoal(this));
-        //this.goalSelector.addGoal(1, new PanicGoal(this, 1.25D));
-        //this.goalSelector.addGoal(1, new RandomStrollGoal(this, 1.0D));
-        //this.goalSelector.addGoal(2, new RandomLookAroundGoal(this));
-        //this.goalSelector.addGoal(3, new TemptGoal(this, 1.2D, Ingredient.of(Items.GOLDEN_CARROT, Items.GOLDEN_APPLE), false));
-
-        // attacc
-        this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
-        this.targetSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, AbstractVillager.class, false));
-        this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, IronGolem.class, true));
-        this.targetSelector.addGoal(4, new NearestAttackableTargetGoal<>(this, Creeper.class, true));
-
+        this.goalSelector.addGoal(0, new RandomStrollGoal(this, 1.0D));
         this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1.0D));
         this.goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 6.0F));
-
-        // a mele
         this.goalSelector.addGoal(2, new UnicornMoveToFlowerGoal(this, 1.0D));
         this.goalSelector.addGoal(1, new UnicornHealingAuraGoal(this));
-        this.goalSelector.addGoal(0, new UnicornHoardingGoal(this));
+        this.goalSelector.addGoal(3, new UnicornHoardingGoal(this));
     }
 
     private <E extends IAnimatable> PlayState predicate(AnimationEvent<E> event) {

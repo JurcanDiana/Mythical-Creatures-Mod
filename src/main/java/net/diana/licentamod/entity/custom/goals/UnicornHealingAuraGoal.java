@@ -17,15 +17,15 @@ import java.util.List;
 public class UnicornHealingAuraGoal extends Goal {
     private final UnicornEntity unicorn;
     private long lastUsedTime;
-    private static final int COOLDOWN = 100; // 5 seconds
-    private static final double RADIUS = 15.0; // 15 blocks radius
+    private static final int COOLDOWN = 100;
+    private static final double RADIUS = 15.0;
 
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public UnicornHealingAuraGoal(UnicornEntity unicorn) {
         this.unicorn = unicorn;
         this.lastUsedTime = 0;
-        this.setFlags(EnumSet.of(Goal.Flag.MOVE)); // unicorn is able to move while performing this goal
+        this.setFlags(EnumSet.of(Goal.Flag.MOVE));
     }
 
     @Override

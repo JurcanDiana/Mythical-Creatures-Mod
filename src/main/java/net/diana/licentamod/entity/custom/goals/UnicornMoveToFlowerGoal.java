@@ -33,9 +33,9 @@ public class UnicornMoveToFlowerGoal extends Goal {
         BlockPos pos = unicorn.blockPosition();
         BlockPos.MutableBlockPos mutablePos = new BlockPos.MutableBlockPos();
 
-        for (int i = 0; i < 10; i++) { // check in a 10-block radius
+        for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
-                for (int k = 0; k < 2; k++) { // check two blocks high
+                for (int k = 0; k < 2; k++) {
                     mutablePos.set(pos.getX() + i - 5, pos.getY() + k, pos.getZ() + j - 5);
                     if (unicorn.level.getBlockState(mutablePos).is(BlockTags.FLOWERS)) {
                         targetFlower = mutablePos.immutable();

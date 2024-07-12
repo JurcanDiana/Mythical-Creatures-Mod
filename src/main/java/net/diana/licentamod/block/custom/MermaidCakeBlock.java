@@ -34,20 +34,20 @@ public class MermaidCakeBlock extends Block {
 
     @Override
     public InteractionResult use(BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
-        if (!world.isClientSide && player.canEat(false)) {  // Check if action is on server side and if player can eat
+        if (!world.isClientSide && player.canEat(false)) {
             return eatCake(world, pos, state, player);
         }
         return InteractionResult.CONSUME;
     }
 
     private InteractionResult eatCake(Level world, BlockPos pos, BlockState state, Player player) {
-        int bites = state.getValue(BITES);  // Get current bites from the block's state
-        if (bites < 6) {  // Check if the cake is not fully eaten
-            player.getFoodData().eat(2, 0.1F);  // Player eats part of the cake, gaining food and saturation
-            world.setBlock(pos, state.setValue(BITES, bites + 1), 3);  // Update block state to next bite level
-            world.playSound(null, pos, SoundEvents.GENERIC_EAT, SoundSource.PLAYERS, 1.0F, 1.0F);  // Play eating sound
+        int bites = state.getValue(BITES);
+        if (bites < 6) {
+            player.getFoodData().eat(2, 0.1F);
+            world.setBlock(pos, state.setValue(BITES, bites + 1), 3);
+            world.playSound(null, pos, SoundEvents.GENERIC_EAT, SoundSource.PLAYERS, 1.0F, 1.0F);
         } else {
-            world.removeBlock(pos, false);  // Remove the block if cake is fully eaten
+            world.removeBlock(pos, false);
         }
         return InteractionResult.SUCCESS;
     }

@@ -54,7 +54,6 @@ public class CentaurRenderer extends GeoEntityRenderer<CentaurEntity> {
         poseStack.scale(0.75F, 0.75F, 0.75F);
         poseStack.mulPose(Vector3f.XP.rotationDegrees(-15));
 
-
         Minecraft.getInstance().getItemRenderer().renderStatic(itemStack, transformType, packedLight, OverlayTexture.NO_OVERLAY, poseStack, bufferSource, entity.getId());
 
         poseStack.popPose();

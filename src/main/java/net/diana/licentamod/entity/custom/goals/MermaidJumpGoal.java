@@ -74,10 +74,6 @@ public class MermaidJumpGoal extends JumpGoal {
             this.breached = fluidState.is(FluidTags.WATER);
         }
 
-//        if (this.breached && !wasBreached) {
-//            this.mermaid.playSound(SoundEvents., 1.0F, 1.0F);
-//        }
-
         Vec3 deltaMovement = this.mermaid.getDeltaMovement();
         if (deltaMovement.y * deltaMovement.y < 0.029999999329447746 && this.mermaid.getXRot() != 0.0F) {
             this.mermaid.setXRot(Mth.rotLerp(this.mermaid.getXRot(), 0.0F, 0.2F));

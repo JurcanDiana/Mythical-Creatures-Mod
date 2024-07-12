@@ -6,6 +6,7 @@ import net.diana.licentamod.entity.custom.CentaurEntity;
 import net.diana.licentamod.entity.custom.MermaidEntity;
 import net.diana.licentamod.entity.custom.UnicornEntity;
 import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
+import net.minecraftforge.event.entity.living.LivingSpawnEvent;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -14,10 +15,7 @@ public class ModEvents {
 
     @Mod.EventBusSubscriber(modid = MythicalCreaturesMod.MOD_ID)
     public static class ForgeEvents {
-        @SubscribeEvent
-        public static void addCustomTrades(VillagerTradesEvent event) {
 
-        }
     }
 
     @Mod.EventBusSubscriber(modid = MythicalCreaturesMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
